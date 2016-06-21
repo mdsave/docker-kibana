@@ -24,4 +24,4 @@ git checkout --orphan "deploy-$CIRCLE_SHA1"
 git config user.email "deploy@mdsave.com"
 git config user.name "Deploy from CircleCI"
 git commit -am "Deployment Commit" -q
-git push git@beta.aptible.com:$APTIBLE_APP.git "deploy-$CIRCLE_SHA1":master --force
+git push git@beta.aptible.com:$APTIBLE_ACCOUNT/$APTIBLE_APP.git "deploy-$CIRCLE_SHA1":master --force
