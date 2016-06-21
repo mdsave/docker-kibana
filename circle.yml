@@ -1,0 +1,15 @@
+machine:
+  environment:
+    APTIBLE_APP: mdsave-kibana
+    APTIBLE_ACCOUNT: mdsave-prod
+  ruby:
+    version: 2.1.2
+test:
+  override: 
+    - circleci/noop
+deployment:
+    master:
+      branch:
+        - master
+      commands:
+        - circleci/deploy
